@@ -65,7 +65,7 @@ export default function Header() {
             className="flex mr-3 rounded-full ml-4 md:mr-0 focus:ring-4 focus:ring-[#346AFF] p-1"
             type="button"
           >
-            <img
+            <Image
               className="w-8 h-8 rounded-full"
               src="/images/user-image.png"
               alt="user photo"
