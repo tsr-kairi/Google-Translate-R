@@ -18,7 +18,7 @@ export default function Translator() {
     params.append("api_key", "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx");
 
     axios
-      .post("https://libretranslate.com/translate", params, {
+      .post("https://libretranslate.de/translate", params, {
         headers: {
           accept: "application/json",
           "Content-Type": "application/x-www-form-urlencoded",
@@ -26,7 +26,7 @@ export default function Translator() {
       })
       .then((res) => {
         console.log(res.data);
-        setOutput(res.data.translatedText(s));
+        setOutput(res.data.translatedText);
       });
   };
 
@@ -48,7 +48,6 @@ export default function Translator() {
       <div className="flex md:flex-row tablet:flex-row flex-col gap-4 md:w-auto w-full pt-10">
         <div className="flex flex-col bg-[#1B1B1F] pb-16 px-4 pt-4 rounded-xl">
           <div className="flex pb-4 items-center w-full">
-            
             <span className="text-[#e5e5e5]">From ({from}) :</span>
             <div className="flex items-center bg-[#111116] text-white ml-4 tablet:w-[200px] md:w-[300px] w-[220px] rounded-full px-6 py-2 cursor-pointer">
               <svg
