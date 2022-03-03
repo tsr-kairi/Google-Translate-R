@@ -4,7 +4,7 @@ export default function Sidebar() {
   //   const [openTab, setOpenTab] = useState(true);
   return (
     <aside className="md:w-[20%] bg-[#111116] border-solid border-r border-gray-500">
-      <div className="md:block hidden md:h-max h-auto py-4 md:pl-10 pr-2">
+      <div className="md:block hidden md:h-max h-auto py-4 tablet:pl-2 md:pl-10 pr-2">
         <ul className="space-y-2">
           <li>
             <a

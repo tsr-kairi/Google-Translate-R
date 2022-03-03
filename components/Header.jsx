@@ -1,19 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import HamBurger from "./HamBurger";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="bg-[#111116] px-2 sm:px-4 py-2.5 border-solid border-b border-gray-500 h-[70px] top-0 sticky z-50">
+    <div className="bg-[#111116] pr-2 sm:px-4 py-2.5 border-solid border-b border-gray-500 h-[70px] top-0 sticky z-50">
       <div className="container w-full flex flex-wrap justify-between items-center mx-auto">
-        <div className="flex items-center w-[33%] justify-between">
-          <a href="#" className="flex items-center">
+        <div className="flex items-center sm-[47%] w-[33%] justify-between">
+          <a href="#" className="hidden md:block items-center">
             <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
               Google
             </span>
             <span className="text-gray-400 ml-2 mt-1 text-sm">Translate</span>
             <sup className="text-gray-600">Ⓡ</sup>
           </a>
-          <div className="hidden relative items-center mr-3 md:mr-0 md:block mt-2">
+
+          {/* menu */}
+          <div
+            onClick={() => setOpen(!open)}
+            className="md:hidden sm:block cursor-pointer ml-4 z-50 transform hover:scale-105 duration-500 ease-in-out origin-center transition-all"
+          >
+            {open ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-white hover:text-[#346AFF] w-[28px] h-[28px] font-semibold"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="text-white hover:text-[#346AFF] w-[28px] h-[28px] font-semibold"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            )}
+          </div>
+
+          <div className="hidden md:block relative items-center mr-3 mt-2">
             <div className="flex absolute inset-y-0 left-1 items-center pl-3 pointer-events-none py-4">
               <svg
                 className="w-5 h-5 text-gray-500"
@@ -73,6 +115,15 @@ export default function Header() {
             />
           </button>
         </div>
+      </div>
+
+      {/* hamburger */}
+      <div
+        className={`md:hidden block sm:block space-y-2 pt-4 w-[90%] z-50 h-screen bg-[#111116] mt-5 transition-all duration-500 ease-in left-0 px-8 opacity-100 ${
+          open ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <HamBurger />
       </div>
     </div>
   );

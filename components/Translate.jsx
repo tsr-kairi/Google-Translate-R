@@ -45,11 +45,12 @@ export default function Translator() {
 
   return (
     <div className="flex flex-col justify-center bg-[#111116] items-center md:h-screen md:w-[80%] w-full">
-      <div className="flex md:flex-row flex-col gap-4 md:w-auto w-full pt-10">
+      <div className="flex md:flex-row tablet:flex-row flex-col gap-4 md:w-auto w-full pt-10">
         <div className="flex flex-col bg-[#1B1B1F] pb-16 px-4 pt-4 rounded-xl">
           <div className="flex pb-4 items-center w-full">
+            
             <span className="text-[#e5e5e5]">From ({from}) :</span>
-            <div className="flex items-center bg-[#111116] text-white ml-4 md:w-[300px] w-[220px] rounded-full px-6 py-2 cursor-pointer">
+            <div className="flex items-center bg-[#111116] text-white ml-4 tablet:w-[200px] md:w-[300px] w-[220px] rounded-full px-6 py-2 cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -89,7 +90,7 @@ export default function Translator() {
         <div className="flex flex-col bg-[#1B1B1F] pb-16 px-4 pt-4 rounded-xl">
           <div className="flex items-center w-full pb-4">
             <span className="text-[#e5e5e5]">To ({to}) :</span>
-            <div className="flex items-center bg-[#111116] text-white ml-4 md:w-[300px] w-[250px] rounded-full px-6 py-2 cursor-pointer">
+            <div className="flex items-center bg-[#111116] text-white ml-4 tablet:w-[200px] md:w-[300px] w-[250px] rounded-full px-6 py-2 cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"

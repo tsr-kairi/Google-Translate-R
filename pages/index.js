@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
-import Translator from "../components/Translate";
+import Translate from "../components/Translate";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <div className="flex">
         <Sidebar />
-        <Translator />
+        <Translate />
       </div>
     </div>
   );
