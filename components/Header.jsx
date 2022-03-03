@@ -61,7 +61,6 @@ export default function Header() {
             </svg>
           </button>
           <button
-            type="button"
             className="flex mr-3 rounded-full ml-4 md:mr-0 focus:ring-4 focus:ring-[#346AFF] p-1"
             type="button"
           >
